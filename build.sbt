@@ -1,4 +1,2 @@
-
-libraryDependencies ++= Seq(
-        "net.liftweb" %% "lift-amqp" % "2.4"
-      )
+libraryDependencies +=
+  "com.typesafe.akka" %% "akka-actor" % "2.2-SNAPSHOT"
