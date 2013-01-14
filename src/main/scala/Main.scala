@@ -138,8 +138,9 @@ object Main {
 
     println("best found: %f\n%s".format(Cloud.best, (Cloud.tasks, Cloud.bestSolution).zipped.groupBy(_._2).mkString("\n")))
     println("\nvisited: %d".format(Cloud.visited))
-
+    System.exit(0)
   }
+
 
 }
 
@@ -193,6 +194,7 @@ object Worker {
 
       if(rmsg.length == 0) {
         println("Done all, exiting")
+        System.exit(0)
         return
       }
       val msg = new String(rmsg, 0, rmsg.length )
